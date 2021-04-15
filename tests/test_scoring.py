@@ -19,7 +19,6 @@ def test_scoring():
         "false_positives": 0,
         "false_negatives": 0,
         "accuracy": 1.0,
-        "length": 4,
     }
     pattern = "ab.*"
     inlist = [
@@ -36,5 +35,4 @@ def test_scoring():
         "false_positives": 1,
         "false_negatives": 1,
         "accuracy": 0.5,
-        "length": 4,
     }
