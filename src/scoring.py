@@ -11,7 +11,6 @@ class Score(BaseModel):
     false_positives: int
     false_negatives: int
     accuracy: float
-    length: int
 
 
 def score(
@@ -39,5 +38,4 @@ def score(
         "false_positives": false_positives,
         "false_negatives": false_negatives,
         "accuracy": (true_positives + true_negatives) / total,
-        "length": len(pattern),
     })
