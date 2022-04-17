@@ -6,6 +6,8 @@ from pydantic import BaseModel
 
 
 class Score(BaseModel):
+    """Score."""
+
     true_positives: int
     true_negatives: int
     false_positives: int
