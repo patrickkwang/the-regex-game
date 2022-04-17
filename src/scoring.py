@@ -14,9 +14,9 @@ class Score(BaseModel):
 
 
 def score(
-        pattern: str,
-        inlist: Iterable = tuple(),
-        outlist: Iterable = tuple(),
+    pattern: str,
+    inlist: Iterable = tuple(),
+    outlist: Iterable = tuple(),
 ) -> Score:
     """Score the pattern with respect to an inlist and outlist."""
     inresults = [
@@ -32,10 +32,10 @@ def score(
     total = len(inresults) + len(outresults)
     return Score(
         **{
-        "true_positives": true_positives,
-        "true_negatives": true_negatives,
-        "false_positives": false_positives,
-        "false_negatives": false_negatives,
-        "accuracy": (true_positives + true_negatives) / total,
+            "true_positives": true_positives,
+            "true_negatives": true_negatives,
+            "false_positives": false_positives,
+            "false_negatives": false_negatives,
+            "accuracy": (true_positives + true_negatives) / total,
         }
     )
